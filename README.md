@@ -1,1 +1,1 @@
-# nexlab.github.io
+# The Networked Existence Laboratory
