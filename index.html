@@ -1,1 +1,478 @@
-Coming Soon
+<!DOCTYPE html>
+<html>
+<title>The Networked Existence Laboratory (NexLab)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--<link rel="maroon" href="C:\Users\Kaustav Basu\Desktop\Lab Website\maroon.css">-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    #center{
+    position: relative;
+    top: 35%;
+    left: 18%;
+    right: 25%;
+    margin-right: : -25px;
+    margin-top: -25px;
+    margin-left: -25px;
+}​
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+<body id="labPage">
+<div id = "grad1">
+
+<!-- Sidebar on click
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav> -->
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-amber"><i class="fa fa-home w3-margin-right"></i>NEXLAB</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-amber">People</a>
+  <a href="#publications" class="w3-bar-item w3-button w3-hide-small w3-hover-amber">Publications</a>
+  <a href="#projects" class="w3-bar-item w3-button w3-hide-small w3-hover-amber">Projects</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-amber">Contact</a>
+  <a href ="https://www.asu.edu/" target="_blank"><img src = "Images\asu.png" class = "w3-bar-item w3-hide-small w3-right" style="width: 8%"></a>
+    <!---<div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+    </div>
+  </div>-->
+  <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-amber" title="Search"><i class="fa fa-search"></i></a>-->
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">People</a>
+    <a href="#publications" class="w3-bar-item w3-button">Publications</a>
+    <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  </div>
+</div>
+
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-center" id="work">
+
+<div class="w3-row-padding w3-center">
+<font color = "white"><h1><span>NEXLAB - The Networked Existence Laboratory</span></h1></font>
+<div class="w3-twothird w3-justify w3-padding-24" id = "center">
+<font color = "white"><h5>
+We live in a society that is highly interconnected - from power grids to communication networks, from water distribution systems to social networks. The NEXLAB, headed by Dr. Arunabha Sen, primarily focuses on the study of the fundamental science of such networks, or Network Science. The study of Network Science involves developing concepts and techniques in interdisciplinary domains such as Graph Theory, Algorithms and Complexity Theory, Machine Learning, Data Science and Information visualization, in order to address the complex needs of todays society. Due to the interdependent nature of the networks surrounding us, the study of Network Science finds applications in several networks that we rely on for our infrastructural, economic and social needs. 
+</h5></font>
+</div>
+</div>
+</div>
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="Images/LabGroup1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Images/LabGroup2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="Images/LabGroup3.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+var slideIndex = 0;
+show();
+
+function show() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(show, 5000); // Change image every 5 seconds
+} 
+</script>
+
+
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<font color = "white"><h2><span>MEMBERS</span></h2>
+<p>Meet the current researchers - our lab rats:</p>
+
+<div class="w3-row"><br>
+
+<div class=" w3-center" style = "vertical-align:middle">
+  <img src="Images\DrSen.png" alt="Lab Advisor" style="width:250px;height:150px%" class="w3-circle w3-hover-opacity">
+  <h3>Arunabha (Arun) Sen</h3>
+  <p>Laboratory Advisor</p>
+</div>
+</div>
+<div class="w3-row"><br>
+<div class="w3-quarter">
+  <a href = "http://www.public.asu.edu/~kbasu2/"><img src="Images\KB.jpg" alt="PhD" style="width:45%" class="w3-circle w3-hover-opacity"></a>
+  <h3>Kaustav Basu</h3>
+  <p>PhD Student</p>
+</div>
+
+<div class="w3-quarter">
+  <a href = "https://www.linkedin.com/in/sandipan-choudhuri-760aa7125/"><img src="Images\SC.jpg" alt="PhD" style="width:45%" class="w3-circle w3-hover-opacity"></a>
+  <h3>Sandipan Choudhuri</h3>
+  <p>PhD Student</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="/w3images/avatar.jpg" alt="PhD" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Ali Altunkaya</h3>
+  <p>PhD Student</p>
+</div>
+
+<div class="w3-quarter">
+  <a href = "https://www.linkedin.com/in/sohini-roy-61b19594/"><img src="Images\SR.jpg" alt="PhD" style="width:45%" class="w3-circle w3-hover-opacity"></a>
+  <h3>Sohini Roy</h3>
+  <p>PhD Student</p>
+</div>
+
+
+<div class="w3-row"><br>
+<p><h2>Our Previous Members:</h2></p>
+
+<div class="w3-row w3-left-align" style="float: left; width: 49%">
+<p><h4>PhDs</h4></p>
+    <ul>
+    <li><h5>Dr. Chenyang Zhou, Graduated 2018, Rubrik, Inc.</h5></li>
+    <li><h5>Dr. Joydeep Banerjee, Graduated 2017, Audible, Inc.</h5></li>
+    <li><h5>Dr. Anisha Mazumder, Graduated 2016, Microsoft</h5></li>
+    <li><h5>Dr. Arun Das, Graduated 2016, Visa, Inc.</h5></li>
+    <li><h5>Dr. Shahrzad Shirazipourazad, Graduated 2014, Paypal</h5></li>
+    <li><h5>Dr. Sujogya Banerjee, Graduated 2013, Amazon</h5></li>
+    <li><h5>Dr. Nibedita Das, Graduated 2010, Tableau</h5></li>
+    <li><h5>Dr. Pavel Ghosh, Graduated 2009, Intel</h5></li>
+    <li><h5>Dr. Sudheendra Murthy, Graduated 2009, Ebay</h5></li>
+</ul>
+</div>
+
+<div class="w3-row w3-left-align" style="float: left; width: 49%">
+<p><h4>Master's</h4></p>
+    <ul>
+    <li><h5>Kevin Thomas</h5></li>
+    <li><h5>Harsh Vachhani</h5></li>
+    <li><h5>Kanisha Khaitan</h5></li>
+    <li><h5>Rachana Maniyar</h5></li>
+    <li><h5>Arvind Ravi</h5></li>
+    <li><h5>Prasad Hegde</h5></li>
+    <li><h5>Shriniwas Kulkarni</h5></li>
+    <li><h5>Mythili Srinivasan</h5></li>
+    <li><h5>Bharath Yadav</h5></li>
+    <li><h5>Kiran Shastri</h5></li>
+</ul>
+</div>
+
+</div>
+
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-center" id="publications">
+<font color = "white"><h2><span>PUBLICATIONS</span></h2>
+<p>2019</p></font>
+<div class="w3-row w3-left-align">
+
+
+<ul>
+    <li>Basu, Kaustav, and Arunabha Sen. "Monitoring individuals in drug trafficking organizations: a social network analysis." In Proceedings of the 2019 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining, pp. 480-483. 2019. <a href="https://dl.acm.org/doi/abs/10.1145/3341161.3342938" target="_blank">[PDF]</a></li>
+    <li>Basu, Kaustav, and Arunabha Sen. "On augmented identifying codes for monitoring drug trafficking organizations." In Proceedings of the 2019 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining, pp. 1136-1139. 2019. <a href="https://dl.acm.org/doi/abs/10.1145/3341161.3343530" target="_blank">[PDF]</a></li>
+    <li>Choudhuri, Sandipan, Kaustav Basu, Kevin Thomas, and Arunabha Sen. "Predicting Future Opioid Incidences Today." arXiv preprint arXiv:1906.08891 (2019). <a href="https://arxiv.org/pdf/1906.08891.pdf" target="_blank">[PDF]</a></li>
+    <li>Basu, Kaustav. "Identification of the Source (s) of Misinformation Propagation Utilizing Identifying Codes." In Companion Proceedings of The 2019 World Wide Web Conference, pp. 7-11. 2019. <a href="https://dl.acm.org/doi/abs/10.1145/3308560.3314200" target="_blank">[PDF]</a></li>
+    <li>Basu, Kaustav, Sanjana Dey, Subhas Nandy, and Arunabha Sen. "Sensor Networks for Structural Health Monitoring of Critical Infrastructures Using Identifying Codes." In 2019 15th International Conference on the Design of Reliable Communication Networks (DRCN), pp. 43-50. IEEE, 2019. <a href="https://ieeexplore.ieee.org/abstract/document/8713618" target="_blank">[PDF]</a></li>
+    <li>Sen, Arunabha, Victoria H. Goliber, Kaustav Basu, Chenyang Zhou, and Sumitava Ghosh. "On upper and lower bounds of identifying code set for soccer ball graph with application to satellite deployment." In Proceedings of the 20th International Conference on Distributed Computing and Networking, pp. 307-316. 2019. <a href="https://dl.acm.org/doi/abs/10.1145/3288599.3288632" target="_blank">[PDF]</a></li>
+    <li>Das, Arun, Chenyang Zhou, Joydeep Banerjee, Anisha Mazumder, and Arunabha Sen. "Smallest Pseudo Target Set Identification and Related Problems Using the Implicative Interdependency Model." In Critical Infrastructure Security and Resilience, pp. 115-134. Springer, Cham, 2019. <a href="https://link.springer.com/chapter/10.1007/978-3-030-00024-0_7" target="_blank">[PDF]</a></li>
+</ul>
+</div>
+</div>
+
+
+
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-center" id="projects">
+<font color = "white"><h2><span class = "w3-border-amber w3-bottombar">PROJECTS</span></h2></font>
+<div class="w3-row w3-left-align">
+<ul>   
+
+    <li>Collaborative Research: RIPS Type 2: Strategic Analysis and Design of Robust and Resilient Interdependent Power and Communications Networks.
+    NSF-CISE (11/1/2014 - 10/31/2017).</li>
+    <li>A Network Planning and Management Tool for Design of Robust and Resilient Networks to withstand WMD Attacks
+    DOD-DTRA (1/29/2014 - 9/29/2015)</li>
+    <li>Fourth International Workshop on Network Science for Communication Networks (NetSciCom)
+    DOD-ARMY-ARO (3/14/2012 - 3/13/2013)</li>
+    <li>Third International Workshop on Network Science for Communication Networks (NetSciCom)
+    DOD-ARMY-ARO (4/4/2011 - 4/3/2012)</li>
+    <li>A Robust and Resilient Network Design Paradigm for Region-Based Faults Inflicted by WMD Attack
+    DOD-DTRA (4/8/2009 - 12/31/2014)</li>
+    <li>First International Workshop on Network Science for Communication Networks (NetSciCom)  
+    DOD-ARMY-ARO (4/8/2009 - 4/7/2010)</li>
+    <li>Robust Network Design - Connectivity and Beyond
+    DOD-AFOSR (4/1/2009 - 5/31/2014)</li>
+    <li>VISION-SHARE System: A Test bed for Video Transmission over Mobile Ad-hoc Networks with Applications to Military Operations in Urban Terrain (DURIP)
+    DOD-ARMY-ARO (5/1/2007 - 8/14/2009)</li>
+    <li>Shared Vision: Embedded Technology for Military Operations in Urban Terrain. DOD-ARMY-ARO
+    DOD-ARMY-ARO (7/28/2006 - 8/14/2009)</li>
+    <li>CEINT Conference/Workshop Support
+    CEIT (1/2/2004 - 6/30/2005)</li>
+    <li>Introduction of a Capstone Course Sequence on System Design with Network Processors
+    CEIT (1/1/2004 - 6/30/2005)</li>
+    <li>Multi-Application Partitioning System (MAPS) - A Design Tool for Hardware/Software Partitioning of Network Processor Systems
+    CEIT (1/1/2004 - 6/30/2005)</li>
+    <li>Hardware-Software Co-Design of Network Process System
+    MOTOROLA LABS (8/15/2003 - 8/14/2006)</li>
+    <li>A Case for an Inexpensive, Highly Available ISCSI Storage Solution
+    CEIT (5/16/2003 - 5/15/2004)</li>
+    <li>Hardware-Software Co-Design of Network Processors and Packet Classification
+    CEIT (1/1/2003 - 12/31/2003)</li>
+    <li>Introduction of a new course on Network Processing and Programming
+    CEIT (7/1/2002 - 6/30/2003)</li>
+    <li>Introduction of a new course on Network Processing and Programming
+    CEIT (5/17/2002 - 8/30/2003)</li>
+    <li>Packet processing in a QOS constrained environment
+    CEIT (5/16/2001 - 5/15/2002)</li>
+    <li>1999 international workshop on discrete algorithms and methods for mobile computing and communications
+    NSF-CISE (5/1/1999 - 4/30/2000)</li>
+    <li>Reduction of visual complexity of large networks
+    North Atlantic Treaty Organization (6/15/1998 - 12/31/1999)</li>
+    <li>Development and system evaluation of Airloop network interface unit
+    Lucent Technologies, Inc. (5/26/1998 - 1/31/1999)</li>
+    <li>Drawing algorithms for large & dynamically changing graphs: a research proposal
+    Sawyer Software Corp. (2/1/1996 - 12/31/1998)</li>
+    <li>Design and analysis of metropolitan area networks
+    US West Advanced Tech. (9/1/1989 - 8/31/1990)</li>
+
+</ul>
+</div>
+</div>
+
+
+
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-center" id="contact">
+  <!--<div class="w3-row">
+    <div class="w3-col m5">-->
+    <font color = "white">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-amber w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p>Swing by for a discussion, we'd love to chat!</p>
+      <p><i class="fa fa-map-marker w3-text-amber w3-xlarge"></i> BYENG 498/530, 699 South Mill Avenue, Tempe, US</p>
+
+    </div>
+    
+</div>
+</div>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+<style>
+#grad1 {
+  background-color: #8c1d40; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#ffc627, #8c1d40); /* Standard syntax (must be last) */
+}
+
+
+span {
+  border-bottom: 5px solid red;
+  border-bottom-color: #8C1D40;
+}
+
+.w3-theme-l5 {color:#000 !important; background-color:#fceef2 !important}
+.w3-theme-l4 {color:#000 !important; background-color:#f3c6d5 !important}
+.w3-theme-l3 {color:#000 !important; background-color:#e88eaa !important}
+.w3-theme-l2 {color:#fff !important; background-color:#dc5580 !important}
+.w3-theme-l1 {color:#fff !important; background-color:#c4285a !important}
+.w3-theme-d1 {color:#fff !important; background-color:#7e1a39 !important}
+.w3-theme-d2 {color:#fff !important; background-color:#701733 !important}
+.w3-theme-d3 {color:#fff !important; background-color:#62142d !important}
+.w3-theme-d4 {color:#fff !important; background-color:#541126 !important}
+.w3-theme-d5 {color:#fff !important; background-color:#460e20 !important}
+
+.w3-theme-light {color:#000 !important; background-color:#fceef2 !important}
+.w3-theme-dark {color:#fff !important; background-color:#460e20 !important}
+.w3-theme-action {color:#fff !important; background-color:#460e20 !important}
+
+.w3-theme {color:#fff !important; background-color:#8c1d40 !important}
+.w3-text-theme {color:#8c1d40 !important}
+.w3-border-theme {border-color:#8c1d40 !important}
+
+.w3-hover-theme:hover {color:#fff !important; background-color:#8c1d40 !important}
+.w3-hover-text-theme:hover {color:#8c1d40 !important}
+.w3-hover-border-theme:hover {border-color:#8c1d40 !important}
+</style>
+</body>
+</html>
